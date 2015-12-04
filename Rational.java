@@ -97,15 +97,17 @@ public class Rational implements Comparable{
 	denominator /= gcd;
     }
     public int compareTo(Object O){
-	if (this.numerator * ((Rational)O).denominator > this.denominator * ((Rational)O).numerator){
-	    return 1;
-	}
-	else if (this.numerator * ((Rational)O).denominator < this.denominator * ((Rational)O).numerator){
-	    return -1;
-	}
-	else{
-	    return 0;
-	}
+	if(O instanceof Rational)
+	    if (this.numerator * ((Rational)O).denominator > this.denominator * ((Rational)O).numerator){
+		return 1;
+	    }
+	    else if (this.numerator * ((Rational)O).denominator < this.denominator * ((Rational)O).numerator){
+		return -1;
+	    }
+	    else{
+		return 0;
+	    }
+	else return -2;
     }
     
     public boolean equals(Object x){
@@ -143,7 +145,7 @@ public class Rational implements Comparable{
 	System.out.println(bigger.compareTo(smaller));  //1
 	System.out.println(smaller.compareTo(bigger)); //-1
 	System.out.println(bigger.compareTo(bigger)); //0
-	System.out.println(bigger.compareTo(a));
+	System.out.println(bigger.compareTo(a)); //-2
 	System.out.println(bigger.equals(smaller)); //false
 	System.out.println(bigger.equals(bigger)); //true
 	System.out.println(bigger.equals(larger)); //true
