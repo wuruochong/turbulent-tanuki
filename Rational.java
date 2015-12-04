@@ -1,7 +1,7 @@
-//Team Rational_Irrationality - Gabriel Marks, Ruochong Wu
+//Illogicians with a Hint of Rationality - Adam McKoy, Ruochong Wu
 //APCS1 pd10
-//HW #37: Rational Equality
-//2015-11-24
+//HW41 -- In America, the Driver Sits on the Left
+//2015-12-04
 
 public class Rational implements Comparable{
 
